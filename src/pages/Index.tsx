@@ -1,12 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Header } from '@/components/Header';
+import { HeroSection } from '@/components/sections/HeroSection';
+import { ProblemSection } from '@/components/sections/ProblemSection';
+import { HowItWorksSection } from '@/components/sections/HowItWorksSection';
+import { FeaturesSection } from '@/components/sections/FeaturesSection';
+import { UseCasesSection } from '@/components/sections/UseCasesSection';
+import { PerformanceSection } from '@/components/sections/PerformanceSection';
+import { IntegrationsSection } from '@/components/sections/IntegrationsSection';
+import { SecuritySection } from '@/components/sections/SecuritySection';
+import { SocialProofSection } from '@/components/sections/SocialProofSection';
+import { ContactSection } from '@/components/sections/ContactSection';
+import { Footer } from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Header />
+      <main>
+        <HeroSection />
+        <ProblemSection />
+        <HowItWorksSection />
+        <FeaturesSection />
+        <UseCasesSection />
+        <PerformanceSection />
+        <IntegrationsSection />
+        <SecuritySection />
+        <SocialProofSection />
+        <ContactSection />
+      </main>
+      <Footer />
     </div>
   );
 };

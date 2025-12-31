@@ -1,0 +1,243 @@
+{
+  "meta": {
+    "title": "Voira — AI Call Assistant for Scam Protection",
+    "description": "Voira answers missed calls with AI, detects scam signals, and delivers instant summaries + recommended actions. Built for telcos and call protection platforms at scale.",
+    "ogImage": "/og-image.png"
+  },
+  "hero": {
+    "headline": "Let AI handle missed calls — safely.",
+    "subheadline": "Voira answers when users don't pick up, detects scam signals, and delivers a call summary + recommended actions in ~2 seconds.",
+    "primaryCta": "Book a pilot",
+    "secondaryCta": "See how it works",
+    "trustStrip": ["Telco-scale", "Low latency", "Privacy-first"]
+  },
+  "problem": {
+    "title": "The problem with missed calls",
+    "points": [
+      {
+        "title": "Scam and impersonation calls still get through.",
+        "description": "Traditional blocking can't catch every threat — and false positives frustrate users."
+      },
+      {
+        "title": "Blocking alone isn't enough.",
+        "description": "Even blocked calls don't tell users why, or what to do next."
+      },
+      {
+        "title": "Users ignore unknown calls.",
+        "description": "Voira turns unanswered calls into safe, actionable outcomes."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "How Voira works",
+    "subtitle": "From missed call to actionable insight in seconds",
+    "steps": [
+      {
+        "number": "01",
+        "title": "User doesn't answer",
+        "description": "When a call goes unanswered, Voira seamlessly picks up."
+      },
+      {
+        "number": "02",
+        "title": "Voira has a conversation",
+        "description": "Natural, real-time AI dialogue gathers intent and detects signals."
+      },
+      {
+        "number": "03",
+        "title": "Instant delivery",
+        "description": "Summary + Warnings + Next actions + JSON analytics via WebSocket."
+      }
+    ]
+  },
+  "features": {
+    "title": "Built for trust at scale",
+    "subtitle": "Enterprise-grade capabilities for carriers and platforms",
+    "items": [
+      {
+        "icon": "MessageSquare",
+        "title": "Real-time conversational handling",
+        "description": "Natural AI dialogue with ≤200ms turn-taking latency."
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "Scam/fraud signal detection",
+        "description": "Identify threats with reason codes and confidence scores."
+      },
+      {
+        "icon": "FileText",
+        "title": "Instant post-call summary",
+        "description": "Structured summaries with recommended next actions."
+      },
+      {
+        "icon": "Zap",
+        "title": "WebSocket JSON analytics",
+        "description": "Structured data delivery in ≤2 seconds (p95 target)."
+      },
+      {
+        "icon": "Settings",
+        "title": "Configurable policies",
+        "description": "Define which calls get handled, when, and how."
+      },
+      {
+        "icon": "Server",
+        "title": "Telco-grade scale",
+        "description": "Proven capacity for up to 10M calls/day."
+      }
+    ]
+  },
+  "useCases": {
+    "title": "Use cases",
+    "subtitle": "Flexible deployment for different business needs",
+    "tabs": [
+      {
+        "id": "telco",
+        "label": "Telco Safe Calls",
+        "title": "Launch a 'Safe Calls' add-on for subscribers",
+        "description": "Offer Voira as a premium B2C service. Subscribers get AI call protection that turns missed calls into peace of mind.",
+        "outcomes": [
+          "Reduce fraud-related support tickets by up to 40%",
+          "Create new recurring revenue stream",
+          "Differentiate with AI-powered trust features"
+        ],
+        "kpis": ["ARPU uplift", "Churn reduction", "NPS improvement"]
+      },
+      {
+        "id": "platform",
+        "label": "Call Protection Platforms",
+        "title": "Embed or white-label Voira",
+        "description": "Integrate Voira into your caller ID app or trust stack. Enhance your product with real-time AI call handling.",
+        "outcomes": [
+          "Expand beyond blocking to active protection",
+          "Increase user engagement with call summaries",
+          "Strengthen differentiation vs. competitors"
+        ],
+        "kpis": ["DAU increase", "Feature adoption rate", "User retention"]
+      },
+      {
+        "id": "enterprise",
+        "label": "Contact Centers",
+        "title": "Qualify inbound calls before agents pick up",
+        "description": "Use Voira as a front-door filter for high-volume contact centers. Qualify intent and reduce agent burden.",
+        "outcomes": [
+          "Reduce call handling time",
+          "Filter out spam and low-value calls",
+          "Improve agent utilization"
+        ],
+        "kpis": ["AHT reduction", "Agent satisfaction", "Cost per call"]
+      }
+    ]
+  },
+  "performance": {
+    "title": "Performance at scale",
+    "subtitle": "Built for the demands of global carriers",
+    "metrics": [
+      {
+        "value": "10M+",
+        "label": "Calls/day capacity"
+      },
+      {
+        "value": "≤200ms",
+        "label": "Turn-taking latency"
+      },
+      {
+        "value": "≤2s",
+        "label": "Analytics delivery (p95)"
+      }
+    ],
+    "disclaimer": "Targets depend on integration environment; validated in pilots."
+  },
+  "integrations": {
+    "title": "Integrations & API",
+    "subtitle": "Connect Voira to your existing infrastructure",
+    "description": "Real-time WebSocket streaming with structured JSON payloads. Integrate with CRM, ticketing, data lakes, or custom workflows.",
+    "cta": "Request API access",
+    "codeExample": {
+      "event": "call_complete",
+      "call_id": "call_abc123",
+      "timestamp": "2024-01-15T10:30:00Z",
+      "summary": "Caller claimed to be from bank support, requested account verification.",
+      "fraud_signals": [
+        {
+          "type": "impersonation",
+          "confidence": 0.87,
+          "reason": "Urgency tactics, requested sensitive info"
+        }
+      ],
+      "recommended_actions": [
+        "Do not call back",
+        "Report to fraud team"
+      ],
+      "metadata": {
+        "duration_ms": 45000,
+        "caller_number": "+1555*****"
+      }
+    }
+  },
+  "security": {
+    "title": "Security & Privacy",
+    "subtitle": "Built with privacy at the core",
+    "points": [
+      {
+        "icon": "Shield",
+        "title": "GDPR-ready posture",
+        "description": "Data minimization, configurable retention, and full audit trails."
+      },
+      {
+        "icon": "Eye",
+        "title": "Analytics, not blocking",
+        "description": "Voira provides intelligence and guidance — it does not block calls."
+      },
+      {
+        "icon": "FileCheck",
+        "title": "Compliance support",
+        "description": "DPA, DPIA support, and security questionnaire available on request."
+      }
+    ],
+    "cta": "View security details",
+    "contactEmail": "security@voira.io"
+  },
+  "socialProof": {
+    "title": "Trusted by industry leaders",
+    "logos": ["Partner 1", "Partner 2", "Partner 3", "Partner 4", "Partner 5"],
+    "testimonials": [
+      {
+        "quote": "Voira transformed how we handle fraud detection. The real-time summaries have been a game-changer for our support team.",
+        "author": "Head of Product",
+        "company": "Leading European MVNO"
+      },
+      {
+        "quote": "Integration was seamless. We were processing calls within days of starting the pilot.",
+        "author": "VP Engineering",
+        "company": "Global Call Protection Platform"
+      },
+      {
+        "quote": "The latency targets Voira hit exceeded our expectations. True telco-grade performance.",
+        "author": "CTO",
+        "company": "Tier-1 Carrier Partner"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Ready to protect your users?",
+    "subtitle": "Run a 30–60 day pilot with dedicated support",
+    "email": "hello@voira.io",
+    "formFields": {
+      "name": "Full name",
+      "company": "Company",
+      "role": "Your role",
+      "email": "Work email",
+      "segment": ["Telco / Carrier", "Call Protection Platform", "Enterprise", "Other"],
+      "volume": "Expected call volume (calls/day)",
+      "notes": "Additional notes"
+    }
+  },
+  "footer": {
+    "links": [
+      { "label": "Privacy", "href": "/privacy" },
+      { "label": "Terms", "href": "/terms" },
+      { "label": "Security", "href": "/security" },
+      { "label": "Contact", "href": "#contact" }
+    ],
+    "copyright": "© 2024 Voira. All rights reserved."
+  }
+}
