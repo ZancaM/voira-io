@@ -6,6 +6,14 @@ import content from '@/data/content.json';
 export const HeroSection = () => {
   const { hero } = content;
 
+  const handleScrollToSection = (sectionId: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Background Glow */}
@@ -31,7 +39,7 @@ export const HeroSection = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-soft border border-accent/20 mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse-subtle" />
-            <span className="text-sm font-medium text-foreground">AI-Powered Call Protection</span>
+            <span className="text-sm font-medium text-foreground">Real-Time AI · Zero False Positives</span>
           </motion.div>
 
           {/* Headline */}
@@ -59,19 +67,15 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 relative z-[60]"
           >
-            <Button variant="hero" asChild>
-              <a href="#contact" className="group">
-                {hero.primaryCta}
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
-              </a>
+            <Button variant="hero" onClick={handleScrollToSection('contact')} className="group">
+              {hero.primaryCta}
+              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
             </Button>
-            <Button variant="hero-secondary" asChild>
-              <a href="#how-it-works" className="group">
-                <Play className="mr-2" size={18} />
-                {hero.secondaryCta}
-              </a>
+            <Button variant="hero-secondary" onClick={handleScrollToSection('how-it-works')} className="group">
+              <Play className="mr-2" size={18} />
+              {hero.secondaryCta}
             </Button>
           </motion.div>
 

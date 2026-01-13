@@ -1,30 +1,91 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Calendar, Mail } from 'lucide-react';
+import { Send, Calendar, Mail, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from '@/hooks/use-toast';
 import content from '@/data/content.json';
 
+// Declare Calendly type for TypeScript
+declare global {
+  interface Window {
+    Calendly?: {
+      initPopupWidget: (options: { url: string }) => void;
+    };
+  }
+}
+
 export const ContactSection = () => {
   const { contact } = content;
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Load Calendly script
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    const link = document.createElement('link');
+    link.href = 'https://assets.calendly.com/assets/external/widget.css';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
+
+    return () => {
+      document.body.removeChild(script);
+      document.head.removeChild(link);
+    };
+  }, []);
+
+  const openCalendly = () => {
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({
+        url: (contact as { calendlyUrl?: string }).calendlyUrl || 'https://calendly.com/matteozancanella/30min'
+      });
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Message sent!",
-      description: "We'll be in touch within 24 hours.",
-    });
-    
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
+
+    const formData = new FormData(e.currentTarget);
+    const accessKey = (contact as { web3formsAccessKey?: string }).web3formsAccessKey;
+
+    // Add Web3Forms access key
+    formData.append("access_key", accessKey || "");
+
+    // Add additional metadata
+    formData.append("subject", "New Voira Pilot Request");
+    formData.append("from_name", "Voira Website");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        toast({
+          title: "Message sent successfully!",
+          description: "We'll be in touch within 24 hours to discuss your pilot.",
+        });
+        (e.target as HTMLFormElement).reset();
+      } else {
+        throw new Error(data.message || "Form submission failed");
+      }
+    } catch (error) {
+      toast({
+        title: "Error sending message",
+        description: "Please try again or email us directly at " + contact.email,
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -173,7 +234,7 @@ export const ContactSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-col gap-6"
           >
-            {/* Calendar Placeholder */}
+            {/* Calendly Booking */}
             <div className="p-8 rounded-2xl bg-card border border-border shadow-lg flex-grow">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-accent-soft flex items-center justify-center">
@@ -184,26 +245,21 @@ export const ContactSection = () => {
                   <p className="text-sm text-muted-foreground">30-minute intro call</p>
                 </div>
               </div>
-              <div className="p-6 rounded-xl bg-secondary/50 border border-border text-center">
-                <p className="text-sm text-muted-foreground mb-4">
-                  Calendar booking widget
+              <div className="p-8 rounded-xl bg-secondary/50 border border-border text-center flex flex-col items-center justify-center min-h-[200px]">
+                <Calendar className="w-12 h-12 text-accent mb-4" />
+                <h4 className="font-semibold text-foreground mb-2">Book a time that works for you</h4>
+                <p className="text-sm text-muted-foreground mb-6 max-w-xs">
+                  Schedule a 30-minute call with our team to discuss your use case and pilot options.
                 </p>
-                <div className="grid grid-cols-5 gap-2 mb-4">
-                  {['Mon', 'Tue', 'Wed', 'Thu', 'Fri'].map((day) => (
-                    <div key={day} className="text-xs text-muted-foreground">{day}</div>
-                  ))}
-                  {[1, 2, 3, 4, 5, 8, 9, 10, 11, 12].map((day) => (
-                    <button
-                      key={day}
-                      className="p-2 text-sm rounded-md hover:bg-accent/10 hover:text-accent transition-colors"
-                    >
-                      {day}
-                    </button>
-                  ))}
-                </div>
-                <p className="text-xs text-muted-foreground">
-                  Select a date to see available times
-                </p>
+                <Button
+                  variant="accent"
+                  onClick={openCalendly}
+                  className="gap-2"
+                >
+                  <Calendar className="w-4 h-4" />
+                  Schedule a call
+                  <ExternalLink className="w-4 h-4" />
+                </Button>
               </div>
             </div>
 

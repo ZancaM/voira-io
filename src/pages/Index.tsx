@@ -7,7 +7,6 @@ import { UseCasesSection } from '@/components/sections/UseCasesSection';
 import { PerformanceSection } from '@/components/sections/PerformanceSection';
 import { IntegrationsSection } from '@/components/sections/IntegrationsSection';
 import { SecuritySection } from '@/components/sections/SecuritySection';
-import { SocialProofSection } from '@/components/sections/SocialProofSection';
 import { ContactSection } from '@/components/sections/ContactSection';
 import { Footer } from '@/components/Footer';
 
@@ -24,7 +23,6 @@ const Index = () => {
         <PerformanceSection />
         <IntegrationsSection />
         <SecuritySection />
-        <SocialProofSection />
         <ContactSection />
       </main>
       <Footer />

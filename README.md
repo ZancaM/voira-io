@@ -1,6 +1,36 @@
-# Welcome to your Lovable project
+# Voira — Real-Time AI Call Assistant for Fraud Reduction
 
-## Project info
+Voira is a **real-time conversational AI** that answers calls when users don't pick up, then delivers **post-call analytics + notifications** (summary, recommended actions, fraud warnings) via **WebSocket** in under 2 seconds.
+
+## Why Voira is Different
+
+This is **not** a pre-spam filter. Users choose to route calls to Voira by simply not answering. This approach:
+- ✅ Eliminates false positives — real calls never get blocked
+- ✅ Gives users full control over their call protection
+- ✅ Reduces fraud without frustrating legitimate callers
+
+## Non-Negotiable Performance
+
+| Metric | Target |
+|--------|--------|
+| Scale | Up to **10M calls/day** |
+| Conversation latency | **≤ 200ms** |
+| Post-call notification | **≤ 2 seconds** |
+
+## Who We Serve
+
+**Direct customers (who pay us):**
+- Telcos and carriers
+- Call protection / caller ID platforms (e.g., Truecaller-like apps)
+- Pay-per-use pricing model
+
+**End customers (who experience value):**
+- Consumer users via subscription sold by telco/platform
+- Premium plan bundles
+
+---
+
+## Project Info
 
 **URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
 

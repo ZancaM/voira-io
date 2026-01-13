@@ -22,14 +22,24 @@ export const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleScrollToContact = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'glass shadow-md py-3' : 'bg-transparent py-5'
+        isScrolled ? 'py-3' : 'py-5'
       }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <nav className="flex items-center justify-between">
+      <div className={`${isScrolled ? 'glass shadow-md' : 'bg-transparent'} transition-all duration-300`}>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <nav className="flex items-center justify-between h-12">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-gradient-accent flex items-center justify-center">
@@ -53,11 +63,11 @@ export const Header = () => {
 
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="ghost" size="sm" asChild>
-              <a href="#contact">Contact</a>
+            <Button variant="ghost" size="sm" onClick={handleScrollToContact}>
+              Contact
             </Button>
-            <Button variant="accent" size="sm" asChild>
-              <a href="#contact">Book a pilot</a>
+            <Button variant="accent" size="sm" onClick={handleScrollToContact}>
+              Start a pilot
             </Button>
           </div>
 
@@ -70,6 +80,7 @@ export const Header = () => {
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </nav>
+      </div>
       </div>
 
       {/* Mobile Menu */}
@@ -93,11 +104,11 @@ export const Header = () => {
                 </a>
               ))}
               <div className="flex flex-col gap-2 pt-4 border-t border-border">
-                <Button variant="outline" asChild>
-                  <a href="#contact">Contact</a>
+                <Button variant="outline" onClick={handleScrollToContact}>
+                  Contact
                 </Button>
-                <Button variant="accent" asChild>
-                  <a href="#contact">Book a pilot</a>
+                <Button variant="accent" onClick={handleScrollToContact}>
+                  Start a pilot
                 </Button>
               </div>
             </div>
