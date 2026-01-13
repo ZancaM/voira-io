@@ -39,9 +39,9 @@ export const Header = () => {
     >
       <div className={`${isScrolled ? 'glass shadow-md' : 'bg-transparent'} transition-all duration-300`}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center justify-between h-12">
+          <nav className="flex items-center justify-between h-12" aria-label="Main navigation">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2">
+          <a href="/" className="flex items-center gap-2" aria-label="Voira - Home">
             <div className="w-8 h-8 rounded-lg bg-gradient-accent flex items-center justify-center">
               <span className="text-accent-foreground font-bold text-lg">V</span>
             </div>

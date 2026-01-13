@@ -89,7 +89,7 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 sm:py-32 bg-gradient-hero">
+    <section id="contact" aria-label="Contact Voira - Start a Pilot" className="py-24 sm:py-32 bg-gradient-hero">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

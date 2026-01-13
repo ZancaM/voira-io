@@ -8,7 +8,7 @@ export const HowItWorksSection = () => {
   const { howItWorks } = content;
 
   return (
-    <section id="how-it-works" className="py-24 sm:py-32 bg-secondary/30">
+    <section id="how-it-works" aria-label="How Voira Works" className="py-24 sm:py-32 bg-secondary/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

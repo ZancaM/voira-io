@@ -13,7 +13,7 @@ export const SecuritySection = () => {
   const { security } = content;
 
   return (
-    <section id="security" className="py-24 sm:py-32 bg-secondary/30">
+    <section id="security" aria-label="Voira Security and GDPR Compliance" className="py-24 sm:py-32 bg-secondary/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

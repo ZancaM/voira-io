@@ -22,7 +22,7 @@ export const FeaturesSection = () => {
   const { features } = content;
 
   return (
-    <section className="py-24 sm:py-32 bg-background">
+    <section id="features" aria-label="Voira Features" className="py-24 sm:py-32 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

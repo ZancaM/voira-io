@@ -5,7 +5,7 @@ export const PerformanceSection = () => {
   const { performance } = content;
 
   return (
-    <section className="py-24 sm:py-32 bg-primary text-primary-foreground relative overflow-hidden">
+    <section id="performance" aria-label="Voira Performance Metrics and SLA" className="py-24 sm:py-32 bg-primary text-primary-foreground relative overflow-hidden">
       {/* Background Pattern */}
       <div 
         className="absolute inset-0 opacity-5"

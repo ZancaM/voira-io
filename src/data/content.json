@@ -1,8 +1,9 @@
 {
   "meta": {
-    "title": "Voira — Real-Time Call Assistant for Fraud Reduction",
-    "description": "Voira is a real-time conversational AI that answers calls when users don't pick up, then delivers post-call analytics and recommended actions via WebSocket in under 2 seconds. Built for telcos",
-    "ogImage": "/og-image.png"
+    "title": "Voira — AI Call Assistant for Fraud Detection & Scam Protection | 8882 Inc",
+    "description": "Voira is a real-time conversational AI that answers calls when users don't pick up, detects fraud signals with 92% accuracy, and delivers post-call analytics via WebSocket in under 2 seconds. Zero false positives. Built for telcos and call protection platforms.",
+    "ogImage": "/og-image.png",
+    "keywords": "AI call assistant, fraud detection, scam protection, call screening, telco API, real-time analytics, spam filter, voice AI"
   },
   "hero": {
     "headline": "Voira answers. Fraud doesn't.",

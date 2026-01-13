@@ -17,7 +17,7 @@ export const IntegrationsSection = () => {
   };
 
   return (
-    <section id="integrations" className="py-24 sm:py-32 bg-background">
+    <section id="integrations" aria-label="Voira WebSocket API Integration" className="py-24 sm:py-32 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Content */}

@@ -15,7 +15,11 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
+    <section
+      id="hero"
+      aria-label="Voira - AI Call Assistant for Fraud Detection"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero"
+    >
       {/* Background Glow */}
       <div className="absolute inset-0 bg-gradient-glow pointer-events-none" />
       
@@ -39,7 +43,7 @@ export const HeroSection = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-soft border border-accent/20 mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse-subtle" />
-            <span className="text-sm font-medium text-foreground">Real-Time AI · Zero False Positives</span>
+            <span className="text-sm font-medium text-foreground">Real-Time Intelligence · Zero False Positives</span>
           </motion.div>
 
           {/* Headline */}

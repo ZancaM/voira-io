@@ -8,7 +8,7 @@ export const ProblemSection = () => {
   const { problem } = content;
 
   return (
-    <section className="py-24 sm:py-32 bg-background">
+    <section id="problem" aria-label="The False Positive Problem in Call Protection" className="py-24 sm:py-32 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
