@@ -92,11 +92,31 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+### Deploy to GitHub Pages (Recommended for Production)
+
+This project is configured for automatic deployment to GitHub Pages. Simply:
+
+1. Push your code to GitHub
+2. Enable GitHub Pages in repository Settings → Pages → Source: "GitHub Actions"
+3. The site will automatically deploy on every push to `main` branch
+
+**📖 [Read the complete deployment guide](./DEPLOYMENT.md)** for step-by-step instructions.
+
+### Alternative: Deploy via Lovable
+
+Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share → Publish.
 
 ## Can I connect a custom domain to my Lovable project?
 
 Yes, you can!
+
+### For GitHub Pages Deployment
+
+1. Add your domain in GitHub repository Settings → Pages → Custom domain
+2. Configure DNS records at your domain provider (see [DEPLOYMENT.md](./DEPLOYMENT.md) for details)
+3. Enable "Enforce HTTPS" once DNS verification completes
+
+### For Lovable Deployment
 
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 

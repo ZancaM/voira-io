@@ -1,0 +1,62 @@
+name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+        id: deployment
+      - name: Deploy to GitHub Pages
+    steps:
+    needs: build
+    runs-on: ubuntu-latest
+      url: ${{ steps.deployment.outputs.page_url }}
+      name: github-pages
+    environment:
+  deploy:
+  # Deployment job
+
+          path: './dist'
+          # Upload dist directory
+        with:
+        uses: actions/upload-pages-artifact@v3
+      - name: Upload artifact
+
+        uses: actions/configure-pages@v4
+      - name: Setup Pages
+
+        run: bun run build
+      - name: Build
+
+        run: bun install
+      - name: Install dependencies
+
+          bun-version: latest
+        with:
+        uses: oven-sh/setup-bun@v1
+      - name: Set up Bun
+
+        uses: actions/checkout@v4
+      - name: Checkout
+    steps:
+    runs-on: ubuntu-latest
+  build:
+  # Build job
+jobs:
+
+  cancel-in-progress: false
+  group: 'pages'
+concurrency:
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+
+  id-token: write
+  pages: write
+  contents: read
+permissions:
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+
+  workflow_dispatch:
+  # Allows you to run this workflow manually from the Actions tab
+
+    branches: ['main']
+  push:
+  # Runs on pushes targeting the default branch
+on:
+
+

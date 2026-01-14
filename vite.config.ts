@@ -5,6 +5,9 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // Set base to '/' for custom domains or root deployment
+  // For GitHub Pages with repo name, use: base: '/voira-ai-intelligent-call-insights/'
+  base: '/',
   server: {
     host: "::",
     port: 8080,
