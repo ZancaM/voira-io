@@ -1,9 +1,9 @@
 {
   "meta": {
     "title": "Voira — AI Call Assistant for Fraud Detection & Scam Protection | 8882 Inc",
-    "description": "Voira is a real-time conversational AI that answers calls when users don't pick up, detects fraud signals with 92% accuracy, and delivers post-call analytics via WebSocket in under 2 seconds. Zero false positives. Built for telcos and call protection platforms.",
+    "description": "Voira is a real-time conversational AI that answers calls when users don't pick up, detects fraud signals, and delivers post-call analytics via WebSocket in under 2 seconds. Zero false positives. Built for telcos by 8882 Inc.",
     "ogImage": "/og-image.png",
-    "keywords": "AI call assistant, fraud detection, scam protection, call screening, telco API, real-time analytics, spam filter, voice AI"
+    "keywords": "AI call assistant, fraud detection, scam protection, call screening, telco API, real-time analytics, spam filter, voice AI, conversational AI, call protection, WebSocket, real-time fraud detection, 8882"
   },
   "hero": {
     "headline": "Voira answers. Fraud doesn't.",
@@ -96,30 +96,6 @@
           "Differentiate with a feature competitors can't match"
         ],
         "kpis": ["ARPU uplift", "Churn reduction", "NPS improvement"]
-      },
-      {
-        "id": "platform",
-        "label": "Call Protection Platforms",
-        "title": "Embed Voira into your trust stack",
-        "description": "Go beyond caller ID and blocking. White-label Voira to give your users real-time intelligence call handling — the feature they didn't know they needed.",
-        "outcomes": [
-          "Evolve from passive blocking to active protection",
-          "Increase engagement with call summaries and alerts",
-          "Eliminate the false positive problem that frustrates users"
-        ],
-        "kpis": ["DAU increase", "Feature adoption rate", "User retention"]
-      },
-      {
-        "id": "enterprise",
-        "label": "Contact Centers",
-        "title": "Intelligence-powered call qualification at scale",
-        "description": "Use Voira as an intelligent front door. Qualify intent, filter spam, and give agents the context they need before they pick up.",
-        "outcomes": [
-          "Reduce average handling time with pre-call context",
-          "Filter low-value and spam calls automatically",
-          "Improve agent satisfaction and utilization"
-        ],
-        "kpis": ["AHT reduction", "Agent satisfaction", "Cost per call"]
       }
     ]
   },
@@ -199,7 +175,7 @@
     "subtitle": "Start a 30–60 day pilot with pay-per-use pricing",
     "email": "info@8882.co",
     "calendlyUrl": "https://calendly.com/matteo-8882/30min",
-    "web3formsAccessKey": "YOUR_WEB3FORMS_ACCESS_KEY",
+    "web3formsAccessKey": "53b623fe-eabe-44a1-b833-f57da544bf60",
     "formFields": {
       "name": "Full name",
       "company": "Company",
