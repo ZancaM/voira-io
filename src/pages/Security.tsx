@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useState } from 'react';
 import { toast } from '@/hooks/use-toast';
+import { Helmet } from 'react-helmet-async';
 
 const SecurityPage = () => {
   const [email, setEmail] = useState('');
@@ -21,6 +22,23 @@ const SecurityPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Security & Privacy | Voira — The New Voice Era</title>
+        <meta name="description" content="Enterprise-grade security and privacy for Voira AI call assistant. Privacy-first architecture, data encryption, compliance standards, and responsible disclosure. Zero data retention on calls." />
+        <meta name="keywords" content="Voira security, AI call privacy, enterprise security, data encryption, GDPR compliance, SOC 2, privacy-first AI, secure voice AI, fraud detection security, telco security" />
+        <link rel="canonical" href="https://voira.io/security" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Security & Privacy | Voira — The New Voice Era" />
+        <meta property="og:description" content="Enterprise-grade security and privacy for Voira AI call assistant. Privacy-first architecture with zero data retention." />
+        <meta property="og:url" content="https://voira.io/security" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:title" content="Security & Privacy | Voira — The New Voice Era" />
+        <meta name="twitter:description" content="Enterprise-grade security and privacy for Voira AI. Privacy-first architecture with zero data retention." />
+      </Helmet>
+
       <Header />
       
       <main className="pt-24">

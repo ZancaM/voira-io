@@ -1,16 +1,16 @@
 {
   "meta": {
-    "title": "Voira — AI Call Assistant for Fraud Detection & Scam Protection | 8882 Inc",
-    "description": "Voira is a real-time conversational AI that answers calls when users don't pick up, detects fraud signals, and delivers post-call analytics via WebSocket in under 2 seconds. Zero false positives. Built for telcos by 8882 Inc.",
+    "title": "Voira — The New Voice Era | AI Call Assistant for Fraud Detection & Scam Protection",
+    "description": "Voira is the new voice era in call protection. Real-time AI call assistant that answers missed calls, detects fraud and scam signals with 92% accuracy, and delivers instant summaries + recommended actions in under 2 seconds. Zero false positives. Built for telcos by 8882 Inc.",
     "ogImage": "/og-image.png",
-    "keywords": "AI call assistant, fraud detection, scam protection, call screening, telco API, real-time analytics, spam filter, voice AI, conversational AI, call protection, WebSocket, real-time fraud detection, 8882"
+    "keywords": "Voira, new voice era, AI call assistant, fraud detection, scam protection, call screening, telco API, real-time analytics, spam filter, voice AI, conversational AI, call protection, WebSocket, real-time fraud detection, 8882, call guard, intelligent call screening, phone scam detection, robocall protection, zero false positives"
   },
   "hero": {
-    "headline": "Voira answers. Fraud doesn't.",
-    "subheadline": "When users don't pick up, Voira steps in — handling the call with real-time AI, detecting fraud signals, and delivering actionable insights via WebSocket in under 2 seconds.",
+    "headline": "The new voice era.",
+    "subheadline": "When users don't pick up, Voira steps in — handling the call with real-time AI, detecting fraud signals with 92% accuracy, and delivering actionable insights via WebSocket in under 2 seconds. Zero false positives.",
     "primaryCta": "Start a pilot",
     "secondaryCta": "See how it works",
-    "trustStrip": ["99.9% uptime", "≤200ms latency", "≤2s analytics delivery"]
+    "trustStrip": ["99.9% uptime", "≤200ms latency", "≤2s analytics delivery", "Zero false positives"]
   },
   "problem": {
     "title": "The false positive problem",
@@ -120,7 +120,7 @@
   },
   "integrations": {
     "title": "WebSocket-first architecture",
-    "subtitle": "Real-time analytics that power instant user experiences",
+    "subtitle": "Analytics that power instant user experiences",
     "description": "Every call completion triggers a WebSocket event with structured JSON — summary, fraud signals, confidence scores, and recommended actions. Integrate with your notification systems, CRMs, or custom workflows in minutes.",
     "cta": "Request API access",
     "codeExample": {
@@ -149,7 +149,7 @@
   },
   "security": {
     "title": "Privacy by design",
-    "subtitle": "Intelligence without interception",
+    "subtitle": "Multi-tenant with strict tenant isolation",
     "points": [
       {
         "icon": "Shield",

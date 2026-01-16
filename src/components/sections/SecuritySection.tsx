@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import { Shield, Eye, FileCheck, ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Shield, Eye, FileCheck } from 'lucide-react';
 import content from '@/data/content.json';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -58,27 +57,7 @@ export const SecuritySection = () => {
           })}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center"
-        >
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="accent" asChild>
-              <a href="/security" className="group">
-                {security.cta}
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
-              </a>
-            </Button>
-            <Button variant="outline" asChild>
-              <a href={`mailto:${security.contactEmail}`}>
-                Contact security team
-              </a>
-            </Button>
-          </div>
-        </motion.div>
+
       </div>
     </section>
   );

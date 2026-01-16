@@ -9,10 +9,15 @@ import { IntegrationsSection } from '@/components/sections/IntegrationsSection';
 import { SecuritySection } from '@/components/sections/SecuritySection';
 import { ContactSection } from '@/components/sections/ContactSection';
 import { Footer } from '@/components/Footer';
+import { Helmet } from 'react-helmet-async';
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Voira — The New Voice Era | AI Call Assistant for Fraud Detection & Scam Protection</title>
+        <meta name="description" content="Voira is the new voice era in call protection. Real-time AI call assistant that answers missed calls, detects fraud and scam signals with 92% accuracy, and delivers instant summaries in under 2 seconds. Zero false positives." />
+      </Helmet>
       <Header />
       <main>
         <HeroSection />

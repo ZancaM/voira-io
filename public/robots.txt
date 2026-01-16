@@ -1,14 +1,21 @@
-# Voira - AI Call Assistant
+# Voira - The New Voice Era
+# AI Call Assistant for Fraud Detection & Scam Protection
 # https://voira.io
 
+# Google
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
 
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
 
+# Social Media
 User-agent: Twitterbot
 Allow: /
 
@@ -18,17 +25,42 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
+# Other Major Search Engines
 User-agent: Slurp
 Allow: /
 
 User-agent: DuckDuckBot
 Allow: /
 
+User-agent: Yandex
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# AI Crawlers for visibility
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Anthropic
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Default rule
 User-agent: *
 Allow: /
 Crawl-delay: 2
 
-# Sitemap
+# Sitemap location
+Sitemap: https://voira.io/sitemap.xml
+
+# Host directive for search engines
+Host: https://voira.io
 Sitemap: https://voira.io/sitemap.xml
 
 # Host
